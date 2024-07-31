@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaravathi Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #welcome-message {
+            position: absolute;
+            left: -100%;
+            white-space: nowrap;
+            font-size: 24px;
+            font-family: 'Brush Script MT', cursive;
+            transition: left 2s;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome-message">Welcome to Amaravathi</div>
+    <div id="category-buttons" style="display:none;">
+        <a href="veg-soups.html" class="button">VEG SOUPS</a>
+        <a href="non-veg-soups.html" class="button">NON-VEG SOUPS</a>
+        <a href="veg-starters.html" class="button">VEG STARTERS</a>
+        <a href="non-veg-starters.html" class="button">NON-VEG STARTERS</a>
+        <a href="egg-starters.html" class="button">EGG STARTERS</a>
+        <a href="roti-items.html" class="button">ROTI ITEMS</a>
+        <a href="veg-curries.html" class="button">VEG CURRIES</a>
+        <a href="non-veg-curries.html" class="button">NON-VEG CURRIES</a>
+        <a href="veg-biryani.html" class="button">VEG BIRYANI</a>
+        <a href="non-veg-biryani.html" class="button">NON-VEG BIRYANI</a>
+        <a href="family-pack-biryani.html" class="button">FAMILY PACK BIRYANI</a>
+        <a href="tandoori-starters.html" class="button">TANDOORI STARTERS</a>
+        <a href="fried-rice.html" class="button">FRIED RICE</a>
+        <a href="noodles.html" class="button">NOODLES</a>
+        <a href="meals.html" class="button">MEALS</a>
+        <a href="drinks.html" class="button">DRINKS</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const welcomeMessage = document.getElementById("welcome-message");
+            setTimeout(function() {
+                welcomeMessage.style.left = "50%";
+            }, 0);
+
+            setTimeout(function() {
+                welcomeMessage.style.display = "none";
+                document.getElementById("category-buttons").style.display = "block";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
